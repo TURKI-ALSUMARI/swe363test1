@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300&family=Cairo:wght@300&family=Changa:wght@300&family=Poppins:ital,wght@1,200&family=Roboto:ital,wght@1,100&family=Rubik:ital,wght@1,300&family=Ubuntu:wght@500&display=swap');
+
+
+
+.Arabia{
+  font-family: Changa;
+}
+
+th {
+  text-transform: uppercase;
+  
+}
+
+p{
+  text-align: center;
+  font-family: Changa;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+image{
+  text-align: center;
+  font-family: Changa;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+tr:nth-child(odd){
+  background-color: #e8900c;
+}
+tr:hover{
+  background-color: #eb7644;
+  
+}
+tr.top:hover{
+  background-color: #eb7644;
+  
+}
+tr.top{
+  background-color: #e8900c; 
+}
+
+a{
+  color:#ffbb0f;
+  
+}
+em{
+  background-color: #eb7664;
+}
+#the_most_important{
+  text-transform: uppercase;
+  background-color: #ff2403;
+}
+h1{
+  font-family: "Changa";
+  text-transform: capitalize;
+  font-size: 84px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 63px; /* 75% */
+}
+p.x_large::first-letter{
+  font-size: x-large;
+}
+
+li{
+ display: inline-block;
+ padding: 0px 10px;
+ 
+ 
+}
+a{
+  text-decoration: none;
+}
+a.order_link{
+  text-decoration: underline;
+  
+}
+a.order_link:hover{
+  cursor:default;
+}
+a.rate_link:hover{
+  cursor:default;
+}
+a.contact_link:hover{
+  cursor:default;
+}
+
+::selection {
+  background: #ff7300;
+}
+
+a:hover{
+  cursor: pointer;
+}
+input{
+  height: 20px;
+}
+input[type=text]{
+  border-color: gray;
+}
+#rate{
+  height: 50px;
+}
+
+html{
+  font-family: Changa;
+}
+
+body{
+  background-color: black;
+  color: aliceblue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37px; /* 231.25% */
+  width: 1440px;
+  height: 473px;
+  flex-shrink: 0;
+}
+a{
+  color: rgb(160, 160, 1);
+}
+header.top_header{
+  background-color: #ffbb0f;
+  padding: 0px 0px 0px 0px ;
+}
+
+
+.top_header{
+  width: 1440px;
+  height: 42px;
+  flex-shrink: 0;
+  
+}
+.icon1{
+  color: black;
+  font-size: 20px;
+  float: right ;
+  margin: 10px 5px 0px 10px;
+
+}
+.icon2{
+  color: black;
+  font-size: 20px;
+  float: right ;
+  margin: 10px 0 0 0 ;
+  
+}
+.log{
+  color: black;
+  float: right;
+  margin:0px 10px 0px 10px ;
+}
+
+.lang{
+  color: black;
+  float: right;
+  margin:0px 10px 0px 10px ;
+}

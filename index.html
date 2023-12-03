@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>
+        Supermarket
+      </title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <meta name="keywords" content="food, fresh, supermarket">
+      <meta name="description" content="This is a websitr to order food form the supermarket">
+      <meta name=" auther" content="Turki Alsumari">
+      <link rel="stylesheet" href="dark.css">
+      <link rel="stylesheet" href="basic_sele.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+      <script src="three.min.js"></script>
+      
+  </head>
+  <body>
+    <div class="loader"></div>
+    <div id="page">
+    <header class="top_header">
+      
+      <a href="contact.html" class="log">log in</a>
+      
+
+      <i class="fa-solid fa-user icon2"></i>
+      <a href="ex-ar.html" class="lang"> change lang </a>
+      <i class='fas fa-globe icon1'></i>
+      <!-- <p>
+        location hear
+      </p>
+      <i class="fa-solid fa-location-dot icon1" ></i> -->
+      
+      
+    </header>
+    <h1 >
+      Welcome to Pasket web page
+    </h1>
+    
+    <img src="images/istockphoto-1138644570-612x612.jpg" height= 200 class="logo">
+    <p class="waterMark"> TS</p>
+    <aside></aside>
+    
+    <aside class="sidebar">
+    
+    <nav >
+      <i class="fa-solid fa-bars ham"></i>
+        <ul class="order">
+          <li class="first_link" >
+            <a  class="order_link" href="order.html" >
+              Clik here to order
+            </a>
+          </li>
+          
+          <li class="second_link" >
+            <a class="contact_link" href="contact.html" > 
+              Contact us
+            </a>
+          </li>
+          
+          <li class="third_link">
+            <a class="rate_link" href="rate-us.html" >
+              Rate us
+            </a>
+          </li>
+        </ul>
+    </nav>
+  </aside>
+    <header>
+      <p >
+        This is an online market to buy fresh food and schedule your orders 
+      </p>
+    </header>
+    
+    <div>
+      <td>
+        <img src="images/istockphoto-185284489-612x612-PhotoRoom.png-PhotoRoom.png" height= 100>
+        <p class="p">
+          <del>price 3.99SAR/kg</del>
+        </p>
+        <p class="np">
+          3.59SAR/kg 
+        </p>
+        <p class="per">
+          10%
+        </p>
+      </td>
+    </div>
+    <div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+      <button id="closeBtn" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <img id = "pic" src="" height="100">
+    <footer>
+      <!-- <a href="order.html">
+        Clik here to order
+      </a>
+    
+      <aside></aside>
+      <a href="contact.html"> 
+        Contact us
+      </a>
+    
+      <aside></aside>
+      <a href="rate us.html">
+        Rate us
+      </a> -->
+
+      <p class="x_large">
+        You can <em>email us</em> If you have any concern or suggestions
+      
+      </p>
+      <p>
+        email:
+        <a href="mailto: talsumari@gmail.com">
+        email
+        </a>
+      </p>
+
+      <p class="Copyright">
+        Copyright &#169; 2023 <em id="the_most_important">Talsumari</em> All rights reserved
+      </p>
+    </footer>
+    
+  </div>
+  </body>
+  <script>
+
+class product{
+      constructor(name,price){
+        this.name = name
+        this.price = price
+      }
+      getName(){
+        return this.name
+      }
+      getPrice(){
+        return this.price
+      }
+    }
+    const p1 = new product("banana","1$")
+    const p2 = new product("apple", "2$")
+
+    const b = document.body
+    const div1 = document.createElement("div")
+    const div2 = document.createElement("div")
+    const aside = document.createElement("aside")
+    b.append(div1.innerText= p1.getName())
+    b.append(div1.innerText=" "+p1.getPrice())
+    b.append(aside)
+    b.append(div2.innerText = p2.getName())
+    b.append(div2.innerText = " "+p2.getPrice())
+    
+    const priceList = [10,20,30]
+    const pmap = priceList.map((p)=> p-0.1*p)
+    console.log(pmap)
+
+
+    const obj = [
+      {
+        text: "Clik here to order",
+        h: "order.html"
+
+      },
+      {
+        text: "Contact us",
+        h: "contact.html"
+      },
+      {
+        text: "Rate-us",
+        h:"rate-us.html"
+      },
+    ]
+
+
+    let footer = document.querySelector("footer")
+    obj.forEach(element => {
+      console.log(element.herf)
+      let link1 = document.createElement("a")
+      let t = document.createElement("aside")
+      link1.innerText = element.text
+      link1.href = element.h
+      t.appendChild(link1)
+      footer.prepend(t)
+    });
+    const cbtn = document.getElementById("closeBtn");
+    const alert = document.querySelector("alert") ;
+    cbtn.addEventListener("click",()=>{
+    alert("use the tab to navigate the links then press enter to go to the")
+})
+
+
+// function api(){
+//   fetch("https://dog-facts-api.herokuapp.com/api/v1/resources/dogs/all")
+//     .then(res => res.json())
+//       .then( data => {
+//         console.log(data.text)
+//   })
+        
+// }
+  
+//   api()
+
+  const f = document.getElementById("pic")
+
+function fact() {
+
+ fetch('https://dog.ceo/api/breeds/image/random')
+   .then(response => response.json())
+
+   .then(data => {
+
+     f.src = data.message;
+
+   });
+
+  
+
+ }
+
+ window.onload = fact;
+
+
+  </script>
+</html>
